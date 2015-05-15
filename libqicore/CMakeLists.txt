@@ -1,5 +1,6 @@
 ## Copyright (c) 2012, 2014 Aldebaran Robotics. All rights reserved.
 
+find_package(qimodule)
 include_directories(".")
 
 set(PUBLIC_HEADERS
@@ -10,19 +11,20 @@ set(PUBLIC_HEADERS
     qicore/logmessage.hpp
     qicore/logprovider.hpp
     )
-install(FILES ${PUBLIC_HEADERS} DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}/qicore)
+qi_install_header(${PUBLIC_HEADERS})
 
-add_library(qicore
+qi_create_module(qicore SRC
   ${PUBLIC_HEADERS}
   #src/behavior.cpp src/behaviormodel.cpp src/format_behavior_model.cpp
   src/loglistener_proxy.cpp
   src/logmanager_proxy.cpp
   src/logprovider_proxy.cpp
+  src/registration.cpp
   src/logproviderimpl.cpp
   src/logproviderimpl.hpp
+  DEPENDS BOOST
 )
+qi_use_lib(qicore QI)
+qi_stage_lib(qicore)
 
-target_link_libraries(qicore ${Boost_LIBRARIES} ${catkin_LIBRARIES})
-install(TARGETS qicore DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
-
-#add_subdirectory("tests")
+add_subdirectory("tests")
