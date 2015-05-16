@@ -1,6 +1,6 @@
 ## Copyright (c) 2012, 2014 Aldebaran Robotics. All rights reserved.
 
-include_directories(".")
+include_directories("." ${catkin_INCLUDE_DIRS})
 
 set(PUBLIC_HEADERS
     qicore/api.hpp
