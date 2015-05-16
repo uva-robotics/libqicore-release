@@ -6,7 +6,7 @@ find_package(catkin REQUIRED naoqi_libqi)
 find_package(Boost)
 
 catkin_package(LIBRARIES qicore
-  INCLUDE ./
+  INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/libqicore/
   DEPENDS Boost
 )
 
