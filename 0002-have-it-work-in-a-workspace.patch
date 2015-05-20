@@ -1,4 +1,4 @@
-From ea5620bee341fe90c4a756c88c2eda8121a2978d Mon Sep 17 00:00:00 2001
+From e128b9cc85fbebb1fdc2de2f3771e9a4b8b27d9b Mon Sep 17 00:00:00 2001
 From: Vincent Rabaud <vincent.rabaud@gmail.com>
 Date: Sat, 16 May 2015 09:11:09 +0200
 Subject: [PATCH 2/2] have it work in a workspace
@@ -34,5 +34,5 @@ index fcf0f67..c702674 100644
  set(PUBLIC_HEADERS
      qicore/api.hpp
 -- 
-1.9.1
+2.1.4
 

@@ -1,4 +1,4 @@
-From bccfa5e82bc8424776542a1a680b7efeb90dc350 Mon Sep 17 00:00:00 2001
+From f71a2ed0392f6cfe3c6dc1368e340b39b37a527e Mon Sep 17 00:00:00 2001
 From: Mikael Arguedas <mikael.arguedas@gmail.com>
 Date: Fri, 15 May 2015 22:00:21 +0200
 Subject: [PATCH 1/2] convert CMake to qibuild
@@ -78,5 +78,5 @@ index b01d020..fcf0f67 100644
 +
 +#add_subdirectory("tests")
 -- 
-1.9.1
+2.1.4
 
