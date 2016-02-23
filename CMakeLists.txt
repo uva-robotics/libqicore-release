@@ -5,6 +5,8 @@ project(naoqi_libqicore)
 find_package(catkin REQUIRED naoqi_libqi)
 find_package(Boost)
 
+add_definitions(-std=gnu++11)
+
 catkin_package(LIBRARIES qicore
   INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/libqicore/
   DEPENDS Boost
