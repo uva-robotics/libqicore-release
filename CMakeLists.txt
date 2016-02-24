@@ -5,6 +5,8 @@ project(naoqi_libqicore)
 find_package(catkin REQUIRED naoqi_libqi)
 find_package(Boost)
 
+add_definitions(-DLIBQI_VERSION=${naoqi_libqi_VERSION_MAJOR}${naoqi_libqi_VERSION_MINOR})
+
 catkin_package(LIBRARIES qicore
   INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/libqicore/
   DEPENDS Boost
