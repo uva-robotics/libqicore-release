@@ -1,7 +1,7 @@
-From bccfa5e82bc8424776542a1a680b7efeb90dc350 Mon Sep 17 00:00:00 2001
+From fbd34eaf96f14984ce85e267897fe83de17912aa Mon Sep 17 00:00:00 2001
 From: Mikael Arguedas <mikael.arguedas@gmail.com>
 Date: Fri, 15 May 2015 22:00:21 +0200
-Subject: [PATCH 1/2] convert CMake to qibuild
+Subject: [PATCH 1/5] convert CMake to qibuild
 
 ---
  CMakeLists.txt           | 17 ++++++++++++-----

@@ -1,7 +1,7 @@
-From ea5620bee341fe90c4a756c88c2eda8121a2978d Mon Sep 17 00:00:00 2001
+From c096a7735ac66b72c0f602669d80218cac2fcf1c Mon Sep 17 00:00:00 2001
 From: Vincent Rabaud <vincent.rabaud@gmail.com>
 Date: Sat, 16 May 2015 09:11:09 +0200
-Subject: [PATCH 2/2] have it work in a workspace
+Subject: [PATCH 2/5] have it work in a workspace
 
 ---
  CMakeLists.txt           | 2 +-
