@@ -1,0 +1,41 @@
+From 79edbbb242cbabd9d97755cdb0adf531be153fa6 Mon Sep 17 00:00:00 2001
+From: Surya Ambrose <surya.ambrose@gmail.com>
+Date: Sat, 19 Mar 2016 22:40:16 +0100
+Subject: [PATCH 5/5] Backward compatibility with libqi 2.3
+
+---
+ CMakeLists.txt                  | 1 +
+ libqicore/qicore/logmessage.hpp | 4 ++++
+ 2 files changed, 5 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index cae27db..a0d2131 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -6,6 +6,7 @@ find_package(catkin REQUIRED naoqi_libqi)
+ find_package(Boost)
+ 
+ add_definitions(-std=gnu++11)
++add_definitions(-DLIBQI_VERSION=${naoqi_libqi_VERSION_MAJOR}${naoqi_libqi_VERSION_MINOR})
+ 
+ catkin_package(LIBRARIES qicore
+   INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/libqicore/
+diff --git a/libqicore/qicore/logmessage.hpp b/libqicore/qicore/logmessage.hpp
+index a1b22c2..1c8fa12 100644
+--- a/libqicore/qicore/logmessage.hpp
++++ b/libqicore/qicore/logmessage.hpp
+@@ -12,7 +12,11 @@
+ # include <qi/log.hpp>
+ # include <qi/anyobject.hpp>
+ 
++#if LIBQI_VERSION>24
+ QI_TYPE_ENUM(qi::LogLevel)
++#else
++QI_TYPE_ENUM_REGISTER(qi::LogLevel)
++#endif
+ 
+ namespace qi
+ {
+-- 
+1.9.1
+

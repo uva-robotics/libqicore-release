@@ -1,0 +1,26 @@
+From 650a0f80fd00728ffdf7121a7256d525b71b6f16 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?S=C3=A9verin=20Lemaignan?=
+ <severin.lemaignan@plymouth.ac.uk>
+Date: Wed, 24 Feb 2016 09:45:37 +0000
+Subject: [PATCH 3/5] Compat with libqi 2.5
+
+---
+ libqicore/qicore/logmessage.hpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libqicore/qicore/logmessage.hpp b/libqicore/qicore/logmessage.hpp
+index a4103f4..a1b22c2 100644
+--- a/libqicore/qicore/logmessage.hpp
++++ b/libqicore/qicore/logmessage.hpp
+@@ -12,7 +12,7 @@
+ # include <qi/log.hpp>
+ # include <qi/anyobject.hpp>
+ 
+-QI_TYPE_ENUM_REGISTER(qi::LogLevel)
++QI_TYPE_ENUM(qi::LogLevel)
+ 
+ namespace qi
+ {
+-- 
+1.9.1
+

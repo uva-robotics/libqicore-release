@@ -1,7 +1,7 @@
-From e128b9cc85fbebb1fdc2de2f3771e9a4b8b27d9b Mon Sep 17 00:00:00 2001
+From 44ccea79e5e91d3aa94427489fafa410cf02c7bf Mon Sep 17 00:00:00 2001
 From: Vincent Rabaud <vincent.rabaud@gmail.com>
 Date: Sat, 16 May 2015 09:11:09 +0200
-Subject: [PATCH 2/2] have it work in a workspace
+Subject: [PATCH 2/5] have it work in a workspace
 
 ---
  CMakeLists.txt           | 2 +-
@@ -34,5 +34,5 @@ index fcf0f67..c702674 100644
  set(PUBLIC_HEADERS
      qicore/api.hpp
 -- 
-2.1.4
+1.9.1
 

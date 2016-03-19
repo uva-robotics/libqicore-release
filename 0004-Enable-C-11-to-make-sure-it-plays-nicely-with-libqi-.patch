@@ -1,0 +1,26 @@
+From dc535cd3f13f37376c41f8e191b4f75e23a35bf3 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?S=C3=A9verin=20Lemaignan?=
+ <severin.lemaignan@plymouth.ac.uk>
+Date: Tue, 23 Feb 2016 16:23:45 +0000
+Subject: [PATCH 4/5] Enable C++11 to make sure it plays nicely with libqi-2.5
+
+---
+ CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9739930..cae27db 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,6 +5,8 @@ project(naoqi_libqicore)
+ find_package(catkin REQUIRED naoqi_libqi)
+ find_package(Boost)
+ 
++add_definitions(-std=gnu++11)
++
+ catkin_package(LIBRARIES qicore
+   INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/libqicore/
+   DEPENDS Boost
+-- 
+1.9.1
+
