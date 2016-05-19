@@ -80,7 +80,7 @@ tracks:
       :{release_inc}
     devel_branch: null
     name: upstream
-    patches: null
+    patches: kinetic
     release_inc: -1
     release_repo_url: null
     release_tag: :{ask}
