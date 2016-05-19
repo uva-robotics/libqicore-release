@@ -1,0 +1,12 @@
+Source: ros-kinetic-naoqi-libqicore
+Section: misc
+Priority: extra
+Maintainer: Surya Ambrose <surya.ambrose@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-naoqi-libqi
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-naoqi-libqicore
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-naoqi-libqi
+Description: Aldebaran's libqicore: a layer on top of libqi
