@@ -1,0 +1,42 @@
+From fdb941d804696a0a05b9184db71fd8ed9eecd91c Mon Sep 17 00:00:00 2001
+From: Surya Ambrose <surya.ambrose@gmail.com>
+Date: Wed, 24 Feb 2016 09:45:37 +0000
+Subject: [PATCH 3/3] Compat with libqi 2.5
+
+---
+ CMakeLists.txt                  | 2 ++
+ libqicore/qicore/logmessage.hpp | 4 ++++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9739930..5cf146e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,6 +5,8 @@ project(naoqi_libqicore)
+ find_package(catkin REQUIRED naoqi_libqi)
+ find_package(Boost)
+ 
++add_definitions(-DLIBQI_VERSION=${naoqi_libqi_VERSION_MAJOR}${naoqi_libqi_VERSION_MINOR})
++
+ catkin_package(LIBRARIES qicore
+   INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/libqicore/
+   DEPENDS Boost
+diff --git a/libqicore/qicore/logmessage.hpp b/libqicore/qicore/logmessage.hpp
+index a4103f4..1c8fa12 100644
+--- a/libqicore/qicore/logmessage.hpp
++++ b/libqicore/qicore/logmessage.hpp
+@@ -12,7 +12,11 @@
+ # include <qi/log.hpp>
+ # include <qi/anyobject.hpp>
+ 
++#if LIBQI_VERSION>24
++QI_TYPE_ENUM(qi::LogLevel)
++#else
+ QI_TYPE_ENUM_REGISTER(qi::LogLevel)
++#endif
+ 
+ namespace qi
+ {
+-- 
+1.9.1
+
