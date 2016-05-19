@@ -12,11 +12,7 @@
 # include <qi/log.hpp>
 # include <qi/anyobject.hpp>
 
-#if LIBQI_VERSION>24
-QI_TYPE_ENUM(qi::LogLevel)
-#else
 QI_TYPE_ENUM_REGISTER(qi::LogLevel)
-#endif
 
 namespace qi
 {
