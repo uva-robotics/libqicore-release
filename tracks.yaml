@@ -86,5 +86,5 @@ tracks:
     release_tag: :{version}
     ros_distro: kinetic
     vcs_type: git
-    vcs_uri: null
+    vcs_uri: https://github.com/aldebaran/libqicore.git
     version: :{ask}
