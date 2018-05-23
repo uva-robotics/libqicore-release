@@ -3,7 +3,9 @@
 cmake_minimum_required(VERSION 2.8)
 project(naoqi_libqicore)
 find_package(catkin REQUIRED naoqi_libqi)
-find_package(Boost)
+
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
 
 add_definitions(-DLIBQI_VERSION=${naoqi_libqi_VERSION_MAJOR}${naoqi_libqi_VERSION_MINOR})
 
